@@ -1,0 +1,12 @@
+/Users/lazerrad/Projects/RNTest/RNTest/bin/Debug/RNTest.dll
+/Users/lazerrad/Projects/RNTest/RNTest/bin/Debug/RNTest.pdb
+/Users/lazerrad/Projects/RNTest/RNTest/bin/Debug/nunit.framework.dll
+/Users/lazerrad/Projects/RNTest/RNTest/bin/Debug/Xamarin.UITest.dll
+/Users/lazerrad/Projects/RNTest/RNTest/bin/Debug/nunit.framework.pdb
+/Users/lazerrad/Projects/RNTest/RNTest/bin/Debug/nunit.framework.xml
+/Users/lazerrad/Projects/RNTest/RNTest/bin/Debug/Xamarin.UITest.xml
+/Users/lazerrad/Projects/RNTest/RNTest/obj/Debug/RNTest.csprojAssemblyReference.cache
+/Users/lazerrad/Projects/RNTest/RNTest/obj/Debug/RNTest.csproj.CoreCompileInputs.cache
+/Users/lazerrad/Projects/RNTest/RNTest/obj/Debug/RNTest.csproj.CopyComplete
+/Users/lazerrad/Projects/RNTest/RNTest/obj/Debug/RNTest.dll
+/Users/lazerrad/Projects/RNTest/RNTest/obj/Debug/RNTest.pdb
