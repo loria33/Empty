@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -26,6 +26,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+  const [todo, setTodo] = useState('');
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -40,12 +42,38 @@ const App: () => React$Node = () => {
             </View>
           )}
           <View style={styles.body}>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => setTodo('red')}
+              style={{
+                backgroundColor: 'red',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: 30,
+              }}>
               <Text>Signin</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => setTodo('green')}
+              style={{
+                backgroundColor: 'green',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: 30,
+              }}>
               <Text>SignUp</Text>
             </TouchableOpacity>
+
+            {todo !== null ? (
+              <View
+                style={{
+                  backgroundColor: 'yellow',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: 30,
+                }}>
+                <Text>{todo}</Text>
+              </View>
+            ) : null}
           </View>
         </ScrollView>
       </SafeAreaView>
