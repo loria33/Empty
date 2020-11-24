@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 PostBuildScriptFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name appcenter-post-build.sh | head -1`
-echo PostBuildScriptFile
+echo $PostBuildScriptFile
 echo $APPCENTER_ACCESS_TOKEN
 echo "THIS IS THE TOKEN ABOVE ME.."
 echo $loginToken
