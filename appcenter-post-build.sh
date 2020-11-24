@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
     echo "Post Build Script Started"
-    appCenterLoginApiToken="d5b653984fd851e1bb6db3f766cf883a1691bfc9"
+    appCenterLoginApiToken=$APPCENTER_ACCESS_TOKEN
     SolutionFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name RNTest.sln`
     SolutionFileFolder=`dirname $SolutionFile`
 
