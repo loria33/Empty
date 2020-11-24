@@ -38,6 +38,5 @@
     appcenter login --token "$APPCENTER_ACCESS_TOKEN"
     appcenter login --token  $APPCENTER_ACCESS_TOKEN
 
-
-    appcenter test run uitest --app "CDA-Global-Beta/FaceOff-Android" --devices "CDA-Global-Beta/android-os-v5-10" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async --token $APPCENTER_ACCESS_TOKEN
+    appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST"  --devices "3f03d1be" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async --token $APPCENTER_ACCESS_TOKEN
 
