@@ -1,13 +1,7 @@
-
 #!/usr/bin/env bash
- echo "--token $emptyApi"
- echo "Post Build Script Started"
- echo APPCENTER_XAMARIN_CONFIGURATION:$APPCENTER_XAMARIN_CONFIGURATION
 
-
-    echo "--token $emptyApi"
     echo "Post Build Script Started"
-    appcenter login --token token
+    
     SolutionFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name RNTest.sln`
     SolutionFileFolder=`dirname $SolutionFile`
 
@@ -19,9 +13,9 @@
 
     chmod -R 777 $SolutionFileFolder
 
-    msbuild "$UITestProject" /property:Configuration=$APPCENTER_XAMARIN_CONFIGURATION
+    msbuild "$UITestProject" /property:Configuration="Debug"
 
-    UITestDLL=`find "$APPCENTER_SOURCE_DIRECTORY" -name "RNTest.dll" | grep bin | head -1` 
+    UITestDLL=`find "$APPCENTER_SOURCE_DIRECTORY" -name "RNTest.dll" | grep bin | head -1`
     echo UITestDLL: $UITestDLL
 
     UITestBuildDir=`dirname $UITestDLL`
@@ -38,8 +32,9 @@
 
     APKFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name *.apk | head -1`
 
-    npm install -g appcenter-cli
-
+    npm install -g appcenter-cli@
     
+    appcenter login --token token
 
-    appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST" --devices "3f03d1be" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
+
+    appcenter test run uitest --app "CDA-Global-Beta/FaceOff-Android" --devices "CDA-Global-Beta/android-os-v5-10" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
