@@ -23,12 +23,14 @@ namespace RNTest
             //    #endif
             
                 return ConfigureApp
-                    .Android.KeyStore("/Users/lazerrad/Documents/Empty/EmptyProj/android/emptier.keystore", "emptier", "emptier", "emptier")
-                    // TODO: Update this path to point to your Android app and uncomment the
-                    // code if the app is not included in the solution.
-                    .ApkFile ("../../../app-release.apk")
+                    .Android.InstalledApp("com.emptyproj")
                     .StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
 
+
+            //KeyStore("/Users/lazerrad/Documents/Empty/EmptyProj/android/emptier.keystore", "emptier", "emptier", "emptier")
+            //        // TODO: Update this path to point to your Android app and uncomment the
+            //        // code if the app is not included in the solution.
+            //        .ApkFile("../../../app-release.apk")
 
         }
     }
