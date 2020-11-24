@@ -1,5 +1,5 @@
 emptyApi
-52cedf9aa200b545ec4ca685eaefb4563e4f009d
+d5b653984fd851e1bb6db3f766cf883a1691bfc9
 
 command
 appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST" 
