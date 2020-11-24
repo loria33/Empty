@@ -48,3 +48,13 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
     appcenter test run uitest --app "[Your App Center App Name]" --devices "[Your Appcenter Android Device List]" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
 fi
+
+
+
+
+error : The OutputPath property is not set for project  
+Please check to make sure that you have specified a valid combination of Configuration and Platform for this project. 
+ Configuration=''  Platform='AnyCPU'.  
+ You may be seeing this message because you are trying to build a project without a solution file, 
+ and have specified a non-default Configuration or Platform that doesn't exist for this project. 
+ [/Users/runner/work/1/s/xamirin/RNTest/RNTest/RNTest.csproj]

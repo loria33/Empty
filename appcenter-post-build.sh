@@ -7,7 +7,7 @@
 
     echo "--token $emptyApi"
     echo "Post Build Script Started"
-
+    appcenter login --token token
     SolutionFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name RNTest.sln`
     SolutionFileFolder=`dirname $SolutionFile`
 
@@ -40,6 +40,6 @@
 
     npm install -g appcenter-cli
 
-    appcenter login --token token
+    
 
     appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST" --devices "3f03d1be" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
