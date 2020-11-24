@@ -3,7 +3,7 @@
  echo "--token $emptyApi"
  echo "Post Build Script Started"
  echo APPCENTER_XAMARIN_CONFIGURATION:$APPCENTER_XAMARIN_CONFIGURATION
-if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
+
 
     echo "--token $emptyApi"
     echo "Post Build Script Started"
@@ -43,4 +43,3 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
     appcenter login --token token
 
     appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST" --devices "3f03d1be" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
-fi
