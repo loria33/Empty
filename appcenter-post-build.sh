@@ -35,6 +35,8 @@
     npm install -g appcenter-cli@
     
     appcenter login --token token
+    appcenter login --token "$APPCENTER_SOURCE_DIRECTORY"
+    appcenter login --token  $APPCENTER_SOURCE_DIRECTORY
 
 
     appcenter test run uitest --app "CDA-Global-Beta/FaceOff-Android" --devices "CDA-Global-Beta/android-os-v5-10" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
