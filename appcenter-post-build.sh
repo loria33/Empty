@@ -1,5 +1,8 @@
 
 #!/usr/bin/env bash
+ echo "--token $emptyApi"
+ echo "Post Build Script Started"
+ echo APPCENTER_XAMARIN_CONFIGURATION:$APPCENTER_XAMARIN_CONFIGURATION
 if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
     echo "--token $emptyApi"
