@@ -33,7 +33,7 @@
     APKFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name *.apk | head -1`
 
     npm install -g appcenter-cli@
-    
-    appcenter login --token token
+    echo $APPCENTER_ACCESS_TOKEN
+    appcenter login --token $APPCENTER_ACCESS_TOKEN
     appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST"  --devices "3f03d1be" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async --token $APPCENTER_ACCESS_TOKEN
 
