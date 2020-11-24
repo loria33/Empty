@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
     echo "Post Build Script Started"
-    
+    appCenterLoginApiToken=$APPCENTER_ACCESS_TOKEN
     SolutionFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name RNTest.sln`
     SolutionFileFolder=`dirname $SolutionFile`
 
@@ -33,7 +33,6 @@
     APKFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name *.apk | head -1`
 
     npm install -g appcenter-cli@2.5.0
-    echo $APPCENTER_ACCESS_TOKEN
-    appcenter login --token $APPCENTER_ACCESS_TOKEN
-    appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST"  --devices "3f03d1be" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async --token $APPCENTER_ACCESS_TOKEN
+    echo appCenterLoginApiToken
+    appcenter test run uitest --app "lori.azerrad-curiositystream.com/TEST"  --devices "3f03d1be" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --token appCenterLoginApiToken --async 
 
